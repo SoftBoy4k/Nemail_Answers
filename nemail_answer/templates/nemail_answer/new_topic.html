@@ -1,0 +1,12 @@
+{% extends 'nemail_answer\base.html' %}
+
+{% block content %}
+    <div class="new_question">
+        <h2 class="new_question-header">Add a new question:</h2>
+        <form class="new_question-form" action="{% url 'nemail_answer:new_topic' %}" method='post'>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="new_question-form__btn" name="submit">add question</button>
+        </form>
+    </div>
+{% endblock content %}

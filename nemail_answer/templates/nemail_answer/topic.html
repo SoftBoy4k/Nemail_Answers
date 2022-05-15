@@ -1,0 +1,28 @@
+{% extends 'nemail_answer\base.html' %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'nemail_answer/style2.css' %}">
+{% block content %}
+    <div class="question">
+        <div class="question-content">
+            <p class="question-title">{{topic}}</p>
+            <p class="question-owner">{{topic.owner}}</p>
+            <p class="question-date">{{topic.date_added}}</p>
+        </div>
+
+        <h2 class="answer-header">Answers</h2>
+
+        <a class="answer-new_answer" href="{% url 'nemail_answer:new_entry' topic.id%}">add new answer</a>
+
+        <ul class="answers">
+            {% for entry in entries %}
+                <li class="answer-content">
+                    <p class="answer-owner">{{entry.owner}}</p>
+                    <p class="answer-date">{{entry.date_added|date:'M d, Y H:i'}}</p>
+                    <p>{{entry.text|linebreaks}}</p>
+                </li>
+            {% empty %}
+                <li>No entries</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock content %}

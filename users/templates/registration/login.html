@@ -1,0 +1,15 @@
+{% extends 'nemail_answer/base.html' %}
+
+{% block content %}
+    <div class="log_in">
+        {% if form.errors %}
+        <p class="login-error">Your username and password didn't match. Please try again.</p>
+        {% endif %}
+        <form class="login-form" method="post" action="{% url 'users:login' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="login-btn" name="submit">log in</button>
+            <input type="hidden" name="next" value="{% url 'nemail_answer:topics' %}"/>
+        </form>
+    </div>
+{% endblock content %}

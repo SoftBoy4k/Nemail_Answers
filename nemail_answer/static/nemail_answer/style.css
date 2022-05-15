@@ -1,0 +1,452 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -----------HEADER----------- */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: 24px;
+    border-bottom: 1px solid black;
+    background-color: rgb(219, 219, 219);
+    padding: 0 5%;
+}
+
+.header *{
+    color: black;
+    display: inline-block;
+    margin: 0;
+}
+
+.header a{
+    text-decoration: none;
+    padding: 10px 26px;
+}
+
+.header p{
+    padding: 10px 0;
+}
+
+.login{
+    display: flex;
+}
+
+.login > a{
+    margin-left: 20px;
+    background-color: rgb(196, 196, 196);
+}
+
+/* -----------/HEADER----------- */
+
+/* -----------QUESTIONS----------- */
+
+.questions{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    max-width: 100%;
+    margin: 3% auto;
+    padding: 0 3%;
+}
+
+.questions *{
+    width: 100%;
+}
+
+.questions-header{
+    margin-bottom: 20px;
+}
+
+.questions-content{
+    display: block;
+}
+
+.questions-content > li{
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-between;
+    height: 40px;
+    max-width: 100%;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    box-shadow: 5px 5px 5px rgba(196, 196, 196, 0.5);
+}
+
+.questions-content > li *{
+    width: 100%;
+}
+
+.questions-content > li > a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    align-self: center;
+}
+
+.questions-content > li > p{
+    color: grey;
+    align-self: end;
+    text-align: end;
+}
+
+.questions-content-new{
+    color: black;
+    text-decoration: none;
+    margin-bottom: 20px;
+    background-color: rgb(196, 196, 196);
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    padding: 5px 0;
+    box-shadow: 5px 5px 5px rgba(196, 196, 196, 0.5);
+}
+
+/* -----------/QUESTIONS----------- */
+
+/* -----------NEW_QUESTION----------- */
+.new_question{
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    max-width: 100%;
+    margin: 15% auto;
+    padding: 0 30px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px rgba(196, 196, 196, 0.5);
+}
+
+.new_question-header{
+    text-align: center;
+}
+
+.new_question-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.new_question-form > p{
+    display: flex;
+}
+
+.new_question-form > p > label{
+    width: 150px;
+}
+
+.new_question-form > p > input{
+    width: 100%;
+}
+
+.new_question *{
+    width: 100%;
+    margin: 10px 0;
+}
+
+.new_question-form__btn{
+    display: block;
+    width: 100px;
+    height: 30px;
+    background-color: rgb(196, 196, 196);
+    box-shadow: 5px 5px 5px rgba(196, 196, 196, 0.5);
+    border: none;
+    transition: background-color 0.3s 0.1s ease;
+}
+
+.new_question-form__btn:hover{
+    cursor: pointer;
+    background-color: rgb(183, 183, 183);
+}
+
+
+/* -----------/NEW_QUESTION----------- */
+
+/* -----------QUESTION----------- */
+
+.question{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    max-width: 100%;
+    margin: 5% auto;
+}
+
+.question *{
+    width: 100%;
+}
+
+.question-content{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    max-width: 100%;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px rgba(196, 196, 196, 0.5);
+    margin: 0 auto;
+    margin-bottom: 4%;
+}
+
+.question-title{
+    font-size: 24px;
+    padding: 1% 2% 2% 2%;
+    background-color: rgb(216, 216, 216);
+}
+
+.question-owner, .question-date{
+    width: 46%;
+    color: rgb(112, 112, 112);
+    margin: 1% 2% 0.5% 2%;
+}
+
+.question-date{
+    text-align: end;
+}
+
+.answer-header{
+    margin-bottom: 20px;
+    margin-left: 2%;
+}
+
+.answer-new_answer{
+    color: black;
+    text-decoration: none;
+    margin-bottom: 20px;
+    margin-left: 2%;
+    background-color: rgb(196, 196, 196);
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    padding: 5px 0;
+    box-shadow: 5px 5px 5px rgba(196, 196, 196, 0.5);
+}
+
+.answers{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    max-width: 100%;
+}
+
+.answers *{
+    width: 100%;
+}
+
+.answer-content{
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    box-shadow: 5px 5px 5px rgba(196, 196, 196, 0.5);
+    margin-bottom: 1%;
+}
+
+.answer-content *{
+    padding: 1% 2% 0.5% 2%;
+}
+
+.answer-owner, .answer-date{
+    width: 50%;
+    color: rgb(112, 112, 112);
+    background-color: rgb(216, 216, 216);
+}
+
+.answer-date{
+    text-align: end;
+}
+
+/* -----------/QUESTION----------- */
+
+
+/* -----------NEW_ANSWER----------- */
+
+.new-answer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    max-width: 100%;
+    margin: 10% auto;
+    padding: 0 30px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px rgba(196, 196, 196, 0.5);
+}
+
+.new-answer-header{
+    text-align: center;
+    font-size: 20px;
+}
+
+.new-answer-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.new-answer *{
+    width: 100%;
+    margin: 10px 0;
+}
+
+.new-answer-form-btn{
+    display: block;
+    width: 100px;
+    height: 30px;
+    background-color: rgb(196, 196, 196);
+    box-shadow: 5px 5px 5px rgba(196, 196, 196, 0.5);
+    border: none;
+    transition: background-color 0.3s 0.1s ease;
+}
+
+.new-answer-form-btn:hover{
+    cursor: pointer;
+    background-color: rgb(183, 183, 183);
+}
+
+.new-answer-question{
+    text-decoration: none;
+    background-color: rgb(196, 196, 196);
+    box-shadow: 5px 5px 5px rgba(196, 196, 196, 0.5);
+    transition: background-color 0.3s 0.1s ease;
+    color: black;
+    display: inline-block;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    padding: 2% 0;
+}
+
+.new-answer-question:hover{
+    background-color: rgb(183, 183, 183);
+}
+
+/* -----------/NEW_ANSWER----------- */
+
+/* -----------LOG_OUT----------- */
+
+.log-out{
+    display: block;
+    width: 400px;
+    max-width: 100%;
+    margin: 10% auto;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* -----------/LOG_OUT----------- */
+
+/* -----------LOG_IN----------- */
+
+.log_in{
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    max-width: 100%;
+    margin: 10% auto;
+    margin-bottom: 0;
+    text-align: center;
+    border: 1px solid black;
+    justify-content: center;
+}
+
+.log_in *{
+    margin: 3% 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.login-error, .login-form > ul li{
+    color: red;
+    width: 100%
+}
+
+.login-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.login-form *{
+    width: 75%;
+}
+
+.login-btn{
+    display: block;
+    width: 100px;
+    height: 30px;
+    background-color: rgb(196, 196, 196);
+    box-shadow: 5px 5px 5px rgba(196, 196, 196, 0.5);
+    border: none;
+    transition: background-color 0.3s 0.1s ease;
+}
+
+.login-btn:hover{
+    cursor: pointer;
+    background-color: rgb(183, 183, 183);
+}
+
+
+/* -----------/LOG_IN----------- */
+
+
+/* -----------REGISTER----------- */
+
+.register-form{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10% auto;
+    margin-bottom: 0;
+    border: 1px solid black;
+    justify-content: center;
+    width: 700px;
+    max-width: 100%;
+    padding: 2% 5%;
+}
+
+.register-form *{
+    width: 100%;
+}
+
+.register-form > p > label{
+    width: 100px;
+    margin-right: 20px;
+}
+
+.register-form > p > input{
+    width: 300px;
+}
+
+.register-form > p > span{
+    display: block;
+    width: 500px;
+    margin-bottom: 2%;
+}
+
+.register-form > ul{
+    margin: 2% 0;
+    border: 1px solid black;
+}
+
+.register-form > ul > li{
+    list-style-type: none;
+}
+
+.register-btn{
+    display: block;
+    width: 100px;
+    height: 30px;
+    background-color: rgb(196, 196, 196);
+    box-shadow: 5px 5px 5px rgba(196, 196, 196, 0.5);
+    border: none;
+    transition: background-color 0.3s 0.1s ease;
+}
+
+.register-btn:hover{
+    cursor: pointer;
+    background-color: rgb(183, 183, 183);
+}
+
+
+/* -----------/REGISTER----------- */

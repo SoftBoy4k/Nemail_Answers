@@ -1,0 +1,17 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'nemail_answer/style.css' %}">
+<div class="header">
+    <a href="{% url 'nemail_answer:topics' %}">Questions</a>
+    <div class="login">
+        {% if user.is_authenticated %}
+            <p>Hello, {{user.username}}.</p>
+            <a href="{% url 'users:logout' %}">log out</a>
+        {% else %}
+            <a href="{% url 'users:register' %}">Register</a>
+            <a href="{% url 'users:login' %}">log in</a>
+        {% endif %}
+    </div>
+</div>
+
+{% block content %}{% endblock content %}

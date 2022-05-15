@@ -1,0 +1,10 @@
+{% extends 'nemail_answer/base.html' %}
+{% block content %}
+    <form class="register-form" method='post' action="{% url 'users:register' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button class="register-btn" name="submit">register</button>
+        <input type="hidden" name="next" value="{% url 'nemail_answer:topics' %}"/>
+    </form>
+{% endblock content %}
